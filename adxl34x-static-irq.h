@@ -2,11 +2,10 @@
 
 #include <linux/gpio.h>
 
-#define HAVE_ADXL34X_STATIC_IRQ
-
 // P8_42 @ beaglebone black => gpio_75
 
-#define ADXL34X_STATIC_IRQ gpio_to_irq(75);
+#define HAVE_ADXL34X_STATIC_IRQ 75
+#define ADXL34X_STATIC_IRQ gpio_to_irq(HAVE_ADXL34X_STATIC_IRQ);
 
 #endif
 

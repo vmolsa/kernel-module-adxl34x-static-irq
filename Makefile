@@ -4,8 +4,7 @@ obj-m += adxl34x-spi.o
 
 CROSS_COMPILE := arm-linux-gnueabi-
 ARCH := arm
-#KDIR := /usr/src/kernel/
-KDIR := /home/dasmyller/linux-dev/KERNEL/
+KDIR := /usr/src/kernel/
 
 all:	
 	make ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KDIR) scripts
