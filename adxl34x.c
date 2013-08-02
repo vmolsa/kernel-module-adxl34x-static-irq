@@ -701,6 +701,7 @@ struct adxl34x *adxl34x_probe(struct device *dev, int irq,
 	unsigned char revid;
 
 #ifdef HAVE_ADXL34X_STATIC_IRQ
+	printk(KERN_INFO, "Using GPIO(%d)\n", HAVE_ADXL34X_STATIC_IRQ);
 	irq = ADXL34X_STATIC_IRQ;
 #endif
 	if (!irq) {
